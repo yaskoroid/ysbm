@@ -1,0 +1,14 @@
+Authorization:
+sudo curl -X POST -H "Content-Type: application/json" -d '{"email":"admin24@gmail.com", "password":"123"}' "https://api.shipments.test-y-sbm.com/login"
+
+Create shipment:
+sudo curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjI2LCJpc3MiOiJodHRwczovL2FwaS5zaGlwbWVudHMudGVzdC15LXNibS5jb20vbG9naW4iLCJpYXQiOjE1NjczMzY3ODUsImV4cCI6MTU2NzM0MDM4NSwibmJmIjoxNTY3MzM2Nzg1LCJqdGkiOiJHckxQSWoxQVd4SVpORzZoIn0.9dHpt_TXl4eYs7Xww7JsDoqt83bo-3fZZqnjXYdMXlU" -d '{"id":1000,"name":"Skoroid first shipment"}' "https://api.shipments.test-y-sbm.com/shipment"
+
+Create item:
+sudo curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjI2LCJpc3MiOiJodHRwczovL2FwaS5zaGlwbWVudHMudGVzdC15LXNibS5jb20vbG9naW4iLCJpYXQiOjE1NjczMzY3ODUsImV4cCI6MTU2NzM0MDM4NSwibmJmIjoxNTY3MzM2Nzg1LCJqdGkiOiJHckxQSWoxQVd4SVpORzZoIn0.9dHpt_TXl4eYs7Xww7JsDoqt83bo-3fZZqnjXYdMXlU" -d '{"id":900,"shipment_id":"1000","name":"Skoroid first item","code":"900900"}' "https://api.shipments.test-y-sbm.com/item"
+
+Show shipment:
+sudo curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjI2LCJpc3MiOiJodHRwczovL2FwaS5zaGlwbWVudHMudGVzdC15LXNibS5jb20vbG9naW4iLCJpYXQiOjE1NjczMzY3ODUsImV4cCI6MTU2NzM0MDM4NSwibmJmIjoxNTY3MzM2Nzg1LCJqdGkiOiJHckxQSWoxQVd4SVpORzZoIn0.9dHpt_TXl4eYs7Xww7JsDoqt83bo-3fZZqnjXYdMXlU" "https://api.shipments.test-y-sbm.com/shipment/1000"
+
+Show item:
+sudo curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjI2LCJpc3MiOiJodHRwczovL2FwaS5zaGlwbWVudHMudGVzdC15LXNibS5jb20vbG9naW4iLCJpYXQiOjE1NjczMzY3ODUsImV4cCI6MTU2NzM0MDM4NSwibmJmIjoxNTY3MzM2Nzg1LCJqdGkiOiJHckxQSWoxQVd4SVpORzZoIn0.9dHpt_TXl4eYs7Xww7JsDoqt83bo-3fZZqnjXYdMXlU" "https://api.shipments.test-y-sbm.com/item/900"
